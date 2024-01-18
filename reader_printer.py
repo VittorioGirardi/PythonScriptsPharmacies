@@ -37,6 +37,7 @@ class Farmacia:
         quit_key = 'Q'
 
         while self.ListaFarmacie:
+            print(" ")
             print_options(self.ListaFarmacie)
             selected_farmacia_index = get_valid_input("\nInserisci il numero corrispondente alla Farmacia: ", range(1, len(self.ListaFarmacie) + 1))
             selected_farmacia = self.ListaFarmacie[selected_farmacia_index - 1]
@@ -57,7 +58,7 @@ class Farmacia:
             self.ListaFarmacie.remove(selected_farmacia)
 
             if not self.ListaFarmacie:
-                print("Tutte le Farmacie sono state associate. Vuoi ricominciare (R) o uscire (Q)?")
+                print("\nTutte le Farmacie sono state associate. Vuoi ricominciare (R) o uscire (Q)?")
                 user_choice = input("Scelta: ").upper()
                 if user_choice == restart:
                     
